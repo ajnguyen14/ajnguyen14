@@ -295,6 +295,77 @@
       letter-spacing: 0.02em;
     }
 
+    /* ── Documents ─────────────────────────────────────────── */
+    .doc-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .doc-card {
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.75rem;
+      background: var(--surface);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .doc-info {}
+
+    .doc-title {
+      font-size: 0.92rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      margin-bottom: 0.3rem;
+    }
+
+    .doc-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+    }
+
+    .doc-actions {
+      display: flex;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
+
+    .doc-btn {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1px;
+      transition: color 0.18s, border-color 0.18s;
+      white-space: nowrap;
+    }
+
+    .doc-btn:hover {
+      color: var(--text);
+      border-color: var(--muted);
+    }
+
+    .doc-btn.primary {
+      color: var(--accent);
+      border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+    }
+
+    .doc-btn.primary:hover {
+      color: var(--text);
+      border-color: var(--muted);
+    }
+
+    @media (max-width: 560px) {
+      .doc-card { flex-direction: column; align-items: flex-start; }
+      .doc-actions { margin-top: 0.5rem; }
+    }
+
     /* ── Contact ────────────────────────────────────────────── */
     .contact-stack {
       display: flex;
@@ -375,6 +446,7 @@
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
+      <a href="#documents">Documents</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -509,6 +581,7 @@
         </div>
 
       </div>
+      <a href="#documents" class="card-link" style="display:inline-block;margin-top:2.5rem;">View research posters ↓</a>
     </div>
   </section>
 
@@ -540,6 +613,49 @@
             <span class="tag">PCR</span>
             <span class="tag">holotomographic microscopy</span>
             <span class="tag">cell culture</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Documents ── -->
+  <section id="documents">
+    <div class="container">
+      <p class="section-label">Documents</p>
+      <div class="doc-stack">
+
+        <div class="doc-card">
+          <div class="doc-info">
+            <p class="doc-title">Resume</p>
+            <p class="doc-meta">Summer 2026</p>
+          </div>
+          <div class="doc-actions">
+            <a href="docs/resume.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn primary">View ↗</a>
+            <a href="docs/resume.pdf" download="Aidan Nguyen - Resume Summer 2026.pdf" class="doc-btn">Download</a>
+          </div>
+        </div>
+
+        <div class="doc-card">
+          <div class="doc-info">
+            <p class="doc-title">Research Poster — Vascular Biology</p>
+            <p class="doc-meta">SJSU / Gavilan · Summer 2025</p>
+          </div>
+          <div class="doc-actions">
+            <a href="docs/poster-2025.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn primary">View ↗</a>
+            <a href="docs/poster-2025.pdf" download="Aidan Nguyen - Research Poster 2025.pdf" class="doc-btn">Download</a>
+          </div>
+        </div>
+
+        <div class="doc-card">
+          <div class="doc-info">
+            <p class="doc-title">Research Poster — Drosophila Genetics</p>
+            <p class="doc-meta">SJSU · Summer 2024</p>
+          </div>
+          <div class="doc-actions">
+            <a href="docs/poster-2024.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn primary">View ↗</a>
+            <a href="docs/poster-2024.pdf" download="Aidan Nguyen - Research Poster 2024.pdf" class="doc-btn">Download</a>
           </div>
         </div>
 
